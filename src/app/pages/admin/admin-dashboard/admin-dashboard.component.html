@@ -1,0 +1,19 @@
+<section class="admin-dashboard">
+  <div class="admin-container">
+    <!-- Barre latérale -->
+    <!-- 📌 Barre latérale -->
+    <nav class="sidebar">
+      <ul>
+        <li><a routerLink="/admin/users">👥 Gestion Utilisateurs</a></li>
+        <li><a routerLink="/admin/appointments">📅 Rendez-vous</a></li>
+        <li><a routerLink="/admin/change-password">🔑 Changer Mot de Passe</a></li> <!-- ✅ Ajout du lien -->
+      </ul>
+    </nav>
+
+
+    <!-- Contenu principal -->
+    <div class="admin-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>

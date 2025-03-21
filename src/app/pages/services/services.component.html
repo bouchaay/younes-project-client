@@ -1,0 +1,41 @@
+<section class="services">
+  <div class="container">
+    <h2>Nos Services</h2>
+    
+    <!-- 🔥 Section de description des services -->
+    <div class="services-intro">
+      <p>
+        Chez <strong>Salon Beauté</strong>, nous vous offrons une gamme de services 
+        haut de gamme adaptés à vos besoins. Que ce soit pour une coupe tendance, 
+        une coloration éclatante ou un soin revitalisant, notre équipe de professionnels 
+        met tout en œuvre pour révéler votre beauté et sublimer vos cheveux.
+      </p>
+      <p>
+        Nos prestations sont conçues pour apporter <strong>confort</strong>, 
+        <strong>relaxation</strong> et <strong>perfection</strong>. Découvrez nos services 
+        et prenez rendez-vous pour une expérience unique et raffinée.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      @for (service of services; track service.id) {
+        <div class="service-card">
+          <img [src]="service.image" [alt]="service.name">
+          <div class="service-info">
+            <h3>{{ service.name }}</h3>
+            <p>{{ service.description }}</p>
+            <p class="price">Prix: {{ service.priceMin }}€ - {{ service.priceMax }}€</p>
+            <p class="duration">Durée: {{ service.durationMin }} - {{ service.durationMax }} min</p>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- 🔥 Bouton "Prendre Rendez-vous" en bas -->
+    <div class="rendezvous-container">
+      <button class="rendezvous-btn" (click)="prendreRdv()">
+        Prendre Rendez-vous
+      </button>
+    </div>
+  </div>
+</section>
